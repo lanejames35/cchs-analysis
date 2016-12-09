@@ -3,14 +3,14 @@
 	Version: 1.1
 	Author: James Lane
 	Created: 05DEC16
-	Updated: 08DEC16
+	Updated: 09DEC16
 	Synopsis: This program provides a template for creating a dataset from the CCHS master suitable for use with bootstrapping a ratio.
 
 	==================
 	CCHS Setup Program
 	==================
-	In order to prevalence rates from the CCHS, a dataset must be created from the CCHS master with the correct dummy
-	coding applied. This program an the attached macros provide a template for creating such a dataset after which bootstrapping
+	In order to calcualte prevalence rates from the CCHS, a dataset must be created from the CCHS master with the correct dummy
+	coding applied. This program and the attached macros provide a template for creating such a dataset after which bootstrapping
 	can be executed. 
 	
 	The program is made up of three steps. Step one is the selection of a CCHS indicator for analysis; step two is the selection of data years
