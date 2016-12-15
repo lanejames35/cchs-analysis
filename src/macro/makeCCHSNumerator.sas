@@ -166,6 +166,12 @@
 				LeisurePA=0;
 			else LeisurePA=.;
 		%end;
+	%else %if &indicator=adultOverObese %then
+		%do;
+			if hwtdisw in(3,4,5,6) then adultOverObese=1;
+			else if hwtdisw in(1,2) then adultOverObese=0;
+			else adultOverObese=.;
+		%end;
 
 	/* ...more statements to follow... */
 %mend;

@@ -17,7 +17,7 @@
 			proc sql;
 				select indicator_desc label="To create a data set for..."
 					  ,indicator_name label="Set the following as name="
-				from cchs.indicators
+				from metadata.indicators
 			;
 			quit;
 		%end;
@@ -28,7 +28,7 @@
 				,indicator_name
 			into :in_id
 				,:in_name
-			from cchs.indicators
+			from metadata.indicators
 				where indicator_name="&name"
 			;
 		quit;
@@ -37,9 +37,9 @@
 		proc sql;
 			select distinct b.variable_name
 				into: analysis separated by " "
-			from cchs.indicators as a
-				,cchs.variable as b
-				,cchs.indicator_variable as c
+			from metadata.indicators as a
+				,metadata.variable as b
+				,metadata.indicator_variable as c
 			where a.indicator_id=&in_id
 				and a.indicator_id=c.indicator_id
 				and c.variable_id=b.variable_id

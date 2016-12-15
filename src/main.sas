@@ -1,6 +1,6 @@
 /**
 	Program: Setup.sas
-	Version: 1.2
+	Version: 1.3
 	Author: James Lane
 	Created: 05DEC16
 	Updated: 15DEC16
@@ -55,6 +55,7 @@
 	** Submit the macro with name=help to get a list of indiators that you can use.
 	
 */
+libname metadata "C:\path\to\metadata\folder";
 %indicatorSetUp(name=generalHealth)
 
 /** 
