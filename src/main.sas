@@ -1,5 +1,5 @@
 /**
-	Program: Setup.sas
+	Program: main.sas
 	Version: 1.3
 	Author: James Lane
 	Created: 05DEC16
