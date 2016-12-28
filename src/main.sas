@@ -3,7 +3,7 @@
 	Version: 1.3
 	Author: James Lane
 	Created: 05DEC16
-	Updated: 15DEC16
+	Updated: 28DEC16
 	Synopsis: This program provides a template for creating a dataset from the CCHS master suitable for use with bootstrapping a ratio.
 
 	==================
@@ -100,12 +100,12 @@ proc sql;
 								 ,%nrstr(select ont_id wts_s geodhr4 mam_037 mex_05 &analysis from &cchs2007(keep=ont_id wts_s geodhr4 mam_037 mex_05 &analysis) union all)
 				))
 		/* 2009 - 2010 data */
-		%sysfunc(ifc(upcase(&get2007)=YES,%nrstr(select ont_id wts_s geodhr4 mam_037 mex_05 &analysis from &cchs2009(keep=ont_id wts_s geodhr4 mam_037 mex_05 &analysis) union all)
+		%sysfunc(ifc(upcase(&get2009)=YES,%nrstr(select ont_id wts_s geodhr4 mam_037 mex_05 &analysis from &cchs2009(keep=ont_id wts_s geodhr4 mam_037 mex_05 &analysis) union all)
 								 ,%nrstr(%put Data for 2009/2010 not used;)
 								 ,%nrstr(select ont_id wts_s geodhr4 mam_037 mex_05 &analysis from &cchs2009(keep=ont_id wts_s geodhr4 mam_037 mex_05 &analysis) union all)
 				))
 		/* 2011 - 2012 data */
-		%sysfunc(ifc(upcase(&get2007)=YES,%nrstr(select ont_id wts_s geodhr4 mam_037 mex_05 &analysis from &cchs2011(keep=ont_id wts_s geodhr4 mam_037 mex_05 &analysis) union all)
+		%sysfunc(ifc(upcase(&get2011)=YES,%nrstr(select ont_id wts_s geodhr4 mam_037 mex_05 &analysis from &cchs2011(keep=ont_id wts_s geodhr4 mam_037 mex_05 &analysis) union all)
 								 ,%nrstr(%put Data for 2011/2012 not used;)
 								 ,%nrstr(select ont_id wts_s geodhr4 mam_037 mex_05 &analysis from &cchs2011(keep=ont_id wts_s geodhr4 mam_037 mex_05 &analysis) union all)
 				))
